@@ -6,7 +6,7 @@
 
 //The final option is then drawn from the array and printed to the screen via SR accessible text, and an accompanying image.
 
-    fetch('https://wger.de/api/v2/exerciseinfo/?format=json')
+    fetch('https://wger.de/api/v2/exercise/?results.category/')
     .then( (response) => {
     return response.json();
     })
@@ -14,5 +14,5 @@
     const exercise = jsonResult.results[0].name;
     console.log(exercise)
     const paragraphEl = document.querySelector('p.nextDeparture')
-    paragraphEl.innerHTML = `Do some ${exercise}s.`
+    paragraphEl.innerHTML = `Work on your ${exercise}.`
     });
