@@ -13,9 +13,24 @@
     <main>
     <form action="">
         <label for="bodyGroup">BODY GROUP</label>
-        <input type="text" id="bodyGroup" name="bodyGroup">
+        <!-- <input type="text" id="bodyGroup" name="bodyGroup"> -->
+        <select name="bodyGroup" id="bodyGroup">
+            <option value="Abs">Abs</option>
+            <option value="Arms">Arms</option>
+            <option value="Back">Back</option>
+            <option value="Calves">Calves</option>
+            <option value="Chest">Chest</option>
+            <option value="Legs">Legs</option>
+            <option value="Shoulders">Shoulders</option>
+        </select>
         <label for="equipGroup">YOUR SPACE</label>
-        <input type="text" id="equipGroup" name="equipGroup">
+        <!-- <input type="text" id="equipGroup" name="equipGroup"> -->
+        <select name="equipGroup" id="equipGroup">
+            <option value="7">"none (bodyweight exercise)"</option>
+            <option value="3">Dumbbell</option>
+            <!-- Come back to the value for the gym https://wger.de/api/v2/equipment/ -->
+            <option value=" ">I have a Gym</option>
+        </select>
         <input type="submit">
 
     </form>
