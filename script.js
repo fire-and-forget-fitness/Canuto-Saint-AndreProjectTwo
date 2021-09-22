@@ -71,7 +71,6 @@
 const app = {};
 
 app.getExercises = () => {
-
     const endpointUrl = new URL(`https://wger.de/api/v2/exercise`)
     endpointUrl.search = new URLSearchParams({
       language: [2],
@@ -79,12 +78,38 @@ app.getExercises = () => {
       equipment: app.equipForm
     }); 
     fetch (endpointUrl)
-      .then ( response => response.json())
-      .then((jsonResult) => {
-          console.log(jsonResult);
-    });
+      .then((response)=>{
+        return response.json()
+      })
+      .then((jsonResult)=>{
+        console.log(jsonResult)
+      });
 };
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// end of experiment zone
 app.bodyForm = document.getElementById("bodyGroup").value;
 app.equipForm = document.getElementById("equipGroup").value;
 console.log(app.bodyForm, app.equipForm)
