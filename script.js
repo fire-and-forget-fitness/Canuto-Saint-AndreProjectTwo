@@ -122,40 +122,46 @@ const app = {};
     .then ( response => {
       return response.json()})
     .then((jsonResult) => {
-        console.log(jsonResult)
+        
         app.displayExercises(jsonResult.results)
   });
 };
+
+
+//  use Math.floor in order to select a random number assigned to the index of the array and display that name on the page
+
+
+
+
 //  Display Exercise on Page
-// app.displayExercises = function (exerciseName){
 
-//   exerciseName.forEach(function(exerciseObject) {
-//     const name = document.createdElement("h2");
-//     name.innerText = exerciseObject.name;
-
-//     const exercise = document.createElement("div");
-//     exercise.classList.add("exerciseInfo");
-
-//     exercise.appendChild(name);
-
-//     document.querySelector("#exercise").appendChild(exercise);
-//     console.log("Am I working?")
-//   })
-// }
 app.displayExercises = function(exerciseName) {
-  console.log("will this work")
-  console.log(exerciseName)
-  exerciseName.forEach(function(exerciseObject) {
+
+  const getRandomExerciseName = function() {
+    const exerciseId = Math.floor(Math.random() * exerciseName.length);
+    return exerciseName[exerciseId].name
+    }
+
+  exerciseName.map(function(exerciseObject) {
     const name = document.createElement("h2")
-    name.innerText = exerciseObject.name;
+    name.innerText = getRandomExerciseName()
+
+    const exercise = document.createElement("div");
+    exercise.classList.add("exerciseInfo");
+
+    exercise.appendChild(name);
+
+
+
+    document.querySelector("#exercise").appendChild(exercise);
+    return exerciseObject
     
-    console.log(name.innerText)
   })
+
+  console.log(getRandomExerciseName())
+  console.log(exerciseName)
+  // console.log(exerciseObject)
 }
-
-// .Map Object into new array, use Math.floor in order to select a random number assigned to the index of the array and display that name on the page
-
-
 
 
 // Event Listeners for Option
