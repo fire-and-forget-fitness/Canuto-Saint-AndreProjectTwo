@@ -86,29 +86,6 @@ app.getExercises = () => {
       });
 };
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // end of experiment zone
 app.bodyForm = document.getElementById("bodyGroup").value;
 app.equipForm = document.getElementById("equipGroup").value;
