@@ -98,7 +98,7 @@ const app = {};
       return response.json()})
     .then((jsonResult) => {
         console.log(jsonResult)
-        app.displayExercises(jsonResult.exerciseObject)
+        app.displayExercises(jsonResult.results)
   });
 };
 //  Display Exercise on Page
@@ -119,6 +119,7 @@ const app = {};
 // }
 app.displayExercises = function(exerciseName) {
   console.log("will this work")
+  console.log(exerciseName)
   exerciseName.forEach(function(exerciseObject) {
     const name = document.createElement("h2")
     name.innerText = exerciseObject.name;
