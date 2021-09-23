@@ -68,32 +68,7 @@
 //   console.log(endpointUrl);
 // })
 
-const app = {};
 
-app.getExercises = () => {
-
-    const endpointUrl = new URL(`https://wger.de/api/v2/exercise`)
-    endpointUrl.search = new URLSearchParams({
-      language: [2],
-      category: app.bodyForm,
-      equipment: app.equipForm
-    }); 
-    fetch (endpointUrl)
-      .then ( response => response.json())
-      .then((jsonResult) => {
-          console.log(jsonResult);
-    });
-};
-
-app.bodyForm = document.getElementById("bodyGroup").value;
-app.equipForm = document.getElementById("equipGroup").value;
-console.log(app.bodyForm, app.equipForm)
-
-app.init = () => {
-app.getExercises();
-};
-
-app.init();
     // fetch('https://wger.de/api/v2/exercise/?results.category/')
     // .then( (response) => {
     // return response.json();
@@ -104,3 +79,75 @@ app.init();
     // const paragraphEl = document.querySelector('p.nextDeparture')
     // paragraphEl.innerHTML = `Work on your ${exercise}.`
     // });
+
+
+// Build Our API Request
+const app = {};
+
+ // Make API call to get Name of Exercise
+ app.getExercises = () => {
+
+  const endpointUrl = new URL(`https://wger.de/api/v2/exercise`)
+  endpointUrl.search = new URLSearchParams({
+    language: [2],
+    category: app.bodyForm,
+    equipment: app.equipForm
+  }); 
+  fetch (endpointUrl)
+    .then ( response => {
+      return response.json()})
+    .then((jsonResult) => {
+        console.log(jsonResult)
+        app.displayExercises(jsonResult.exerciseObject)
+  });
+};
+//  Display Exercise on Page
+// app.displayExercises = function (exerciseName){
+
+//   exerciseName.forEach(function(exerciseObject) {
+//     const name = document.createdElement("h2");
+//     name.innerText = exerciseObject.name;
+
+//     const exercise = document.createElement("div");
+//     exercise.classList.add("exerciseInfo");
+
+//     exercise.appendChild(name);
+
+//     document.querySelector("#exercise").appendChild(exercise);
+//     console.log("Am I working?")
+//   })
+// }
+app.displayExercises = function(exerciseName) {
+  console.log("will this work")
+  exerciseName.forEach(function(exerciseObject) {
+    const name = document.createElement("h2")
+    name.innerText = exerciseObject.name;
+    
+    console.log(name.innerText)
+  })
+}
+
+// .Map Object into new array, use Math.floor in order to select a random number assigned to the index of the array and display that name on the page
+
+
+
+
+// Event Listeners for Option
+
+app.setUpEventListeners = function () {
+  document.querySelector("#userInput").addEventListener("submit", function(event) {
+    event.preventDefault();
+    app.bodyForm = document.getElementById("bodyGroup").value;
+    app.equipForm = document.getElementById("equipGroup").value;
+    console.log(app.bodyForm, app.equipForm)
+    app.getExercises(this.value)
+  })
+}
+
+
+
+app.init = () => {
+  app.setUpEventListeners()
+};
+
+app.init();
