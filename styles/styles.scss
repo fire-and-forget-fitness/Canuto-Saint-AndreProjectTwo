@@ -1,6 +1,6 @@
-body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+@import "setup";
+.wrapper {
+    max-width: 1200px;
+    width: 85%;
+    margin: 0 auto;
 }
