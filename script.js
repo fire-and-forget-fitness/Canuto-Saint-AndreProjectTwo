@@ -68,31 +68,6 @@
 //   console.log(endpointUrl);
 // })
 
-<<<<<<< HEAD
-const app = {};
-
-app.getExercises = () => {
-    const endpointUrl = new URL(`https://wger.de/api/v2/exercise`)
-    endpointUrl.search = new URLSearchParams({
-      language: [2],
-      category: app.bodyForm,
-      equipment: app.equipForm
-    }); 
-    fetch (endpointUrl)
-      .then((response)=>{
-        return response.json()
-      })
-      .then((jsonResult)=>{
-        console.log(jsonResult)
-      });
-};
-
-// end of experiment zone
-app.bodyForm = document.getElementById("bodyGroup").value;
-app.equipForm = document.getElementById("equipGroup").value;
-console.log(app.bodyForm, app.equipForm)
-=======
->>>>>>> 55337cf92e06db97f5cc468389cd1907743fa650
 
     // fetch('https://wger.de/api/v2/exercise/?results.category/')
     // .then( (response) => {
