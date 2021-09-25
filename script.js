@@ -17,7 +17,7 @@ app.getExercises = () => {
 
   const endpointUrl = new URL(`https://wger.de/api/v2/exercise`)
   endpointUrl.search = new URLSearchParams({
-    language: [2],
+    language: app.langForm,
     category: app.bodyForm,
     equipment: app.equipForm
   }); 
@@ -67,7 +67,8 @@ app.setUpEventListeners = function () {
     event.preventDefault();
     app.bodyForm = document.getElementById("bodyGroup").value;
     app.equipForm = document.getElementById("equipGroup").value;
-    console.log(app.bodyForm, app.equipForm)
+    app.langForm = document.getElementById("langGroup").value;
+    console.log(app.bodyForm, app.equipForm, app.langForm)
     app.getExercises(this.value)
   })
 }
