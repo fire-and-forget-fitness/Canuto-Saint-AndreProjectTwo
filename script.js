@@ -14,7 +14,7 @@ const app = {};
 
  // Make API call to get Name of Exercise
 app.getExercises = () => {
-  const endpointUrl = new URL(`https://wger.de/api/v2/exerciseinfo/?format=json&?limit=419`)
+  const endpointUrl = new URL(`https://wger.de/api/v2/exercise/?format=json&?limit=419`)
   endpointUrl.search = new URLSearchParams({
     limit: 99,
     offset: 0,
