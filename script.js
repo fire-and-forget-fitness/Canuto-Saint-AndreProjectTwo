@@ -14,7 +14,7 @@ const app = {};
 
  // Make API call to get Name of Exercise
 app.getExercises = () => {
-  const endpointUrl = new URL(`https://wger.de/api/v2/exerciseinfo/?format=json&?limit=419`)
+  const endpointUrl = new URL(`https://wger.de/api/v2/exerciseinfo/`)
   endpointUrl.search = new URLSearchParams({
     limit: 99,
     offset: 0,
@@ -35,6 +35,8 @@ app.getExercises = () => {
 
 app.displayExercises = function(exerciseName) {
 
+// If exerciseImage === undefined, run/call API again; else run displayImage
+
   // Selects a random exercise name from the array of the object
   const exerciseId = Math.floor(Math.random() * exerciseName.length);
   const getRandomExerciseName = function() {
@@ -45,6 +47,17 @@ app.displayExercises = function(exerciseName) {
     const filteredDesc = exerciseName[exerciseId].description
     return filteredDesc 
     }
+  // const exerciseImage = function() {
+  //   const baseReturn = exerciseName[exerciseId].images[0]
+    
+  //   if ( baseReturn != undefined) {
+  //     return baseReturn
+  //   }else {
+  //     app.getExercises()
+  //   }
+  // }
+  // exerciseImage()
+  
   // Appends chosen exercise on page
   const name = document.createElement("h2");
   name.innerText = getRandomExerciseName();
@@ -56,7 +69,12 @@ app.displayExercises = function(exerciseName) {
   exercise.appendChild(name);
   exercise.appendChild(desc);
   document.querySelector("#exercise").appendChild(exercise);
+
+  // console.log(exerciseName[exerciseId].images[0])
+  // console.log(exerciseName[exerciseId].images[0].exercise_base)
   console.log(exerciseName);
+  console.log(exerciseId)
+
 }
 
 // Event Listeners for Option
