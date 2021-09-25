@@ -14,10 +14,10 @@ const app = {};
 
  // Make API call to get Name of Exercise
 app.getExercises = () => {
-  const endpointUrl = new URL(`https://wger.de/api/v2/exerciseinfo/`)
+  const endpointUrl = new URL(`https://wger.de/api/v2/exercise`)
   endpointUrl.search = new URLSearchParams({
-    limit: 99,
-    offset: 0,
+    // limit: 99,
+    // offset: 0,
     language: app.langForm,
     category: app.bodyForm,
     equipment: app.equipForm
@@ -47,16 +47,6 @@ app.displayExercises = function(exerciseName) {
     const filteredDesc = exerciseName[exerciseId].description
     return filteredDesc 
     }
-  // const exerciseImage = function() {
-  //   const baseReturn = exerciseName[exerciseId].images[0]
-    
-  //   if ( baseReturn != undefined) {
-  //     return baseReturn
-  //   }else {
-  //     app.getExercises()
-  //   }
-  // }
-  // exerciseImage()
   
   // Appends chosen exercise on page
   const name = document.createElement("h2");
