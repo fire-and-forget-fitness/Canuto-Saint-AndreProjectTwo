@@ -5,50 +5,80 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
-    <link rel="stylesheet" href="./styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;800&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="./styles/styles.css">
+    
     <title>Fire & Forget Fitness</title>
 </head>
+
+
 <body>
     <header>
-        <h1>FIRE & FORGET FITNESS</h1>
+        <div class="navBar">
+            <nav>
+                <ul>
+                    <li>THIS</li>
+                    <li>THAT</li>
+                    <li>THE OTHER</li>
+                </ul>
+            </nav>
+        </div>
+        <div class=" title wrapper"> 
+            <h1>FIRE & FORGET</h1>
+            <img src="./missileIcon.svg" alt="">
+            <h2>FITNESS</h2>
+        </div>
     </header>
+
+
+
     <main>
-    <form action="index.html"  method="POST"  id="userInput">
-        <label for="bodyGroup">BODY GROUP</label>
-        <!-- <input type="text" id="bodyGroup" name="bodyGroup"> -->
-        <select name="langGroup" id="langGroup">
-            <option value="2">English</option>
-            <option value="1">Deutsch</option>
-        </select>
+        <div class="wrapper">
+            <form action="index.html"  method="POST"  id="userInput">
+            <label for="bodyGroup">BODY GROUP</label>
+            <!-- <input type="text" id="bodyGroup" name="bodyGroup"> -->
+            <select name="langGroup" id="langGroup">
+                <option value="2">English</option>
+                <option value="1">Deutsch</option>
+            </select>
 
-        <select name="bodyGroup" id="bodyGroup">
-            <option value="10">Abs</option>
-            <option value="8">Arms</option>
-            <option value="12">Back</option>
-            <option value="11">Chest</option>
-            <option value="9">Legs</option>
-            <option value="13">Shoulders</option>
-        </select>
-        <label for="equipGroup">YOUR EQUIPMENT</label>
-        <!-- <input type="text" id="equipGroup" name="equipGroup"> -->
-        <select name="equipGroup" id="equipGroup">
-            <option value="7">None</option>
-            <option value="3">Dumbbell</option>
-            <!-- Come back to the value for the gym https://wger.de/api/v2/equipment/ -->
-            <option value="1, 2, 4, 5, 6, 8, 9, 10">I have a Gym</option>
-        </select>
+            <select name="bodyGroup" id="bodyGroup">
+                <option value="10">Abs</option>
+                <option value="8">Arms</option>
+                <option value="12">Back</option>
+                <option value="11">Chest</option>
+                <option value="9">Legs</option>
+                <option value="13">Shoulders</option>
+            </select>
+            <label for="equipGroup">YOUR EQUIPMENT</label>
+            <!-- <input type="text" id="equipGroup" name="equipGroup"> -->
+            <select name="equipGroup" id="equipGroup">
+                <option value="7">None</option>
+                <option value="3">Dumbbell</option>
+                <!-- Come back to the value for the gym https://wger.de/api/v2/equipment/ -->
+                <option value="1, 2, 4, 5, 6, 8, 9, 10">I have a Gym</option>
+            </select>
 
-        <input type="submit" value="Submit">
+            <input type="submit" value="Submit">
 
-    </form>
+        </form>
 
-    <div id="exercise">
+        <div class="exercise" id="exercise">
 
-    </div>
-
+        </div>
+        </div>
     </main>
+
+    
     <footer>
-        <p class="copyright">Juno College of Technology</p>
+        <div class="wrapper">
+            <p class="copyright">Juno College of Technology</p>
+            <div>Icon made from <a href="http://www.onlinewebfonts.com/icon">Icon Fonts</a> is licensed by CC BY 3.0</div>
+        </div>
+        
     </footer>
 </body>
 

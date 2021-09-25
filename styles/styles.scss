@@ -1,6 +1,32 @@
 @import "setup";
+$baseFont: 'Inconsolata', monospace;
+
 .wrapper {
     max-width: 1200px;
     width: 85%;
     margin: 0 auto;
+}
+header {
+    font-family: $baseFont;
+    nav {
+        display: flex;
+        justify-content: right;
+        ul {
+            display: flex;
+            list-style: none;
+        }
+    }
+    h1 {
+        font-size: 6rem;
+        margin: 0 0 -60px 0;
+    }
+    img {
+        width: 200px;
+        height: auto;
+    }
+    h2 {
+        font-size: 5rem;
+        margin: -40px 0 0 0;
+    }
+
 }
