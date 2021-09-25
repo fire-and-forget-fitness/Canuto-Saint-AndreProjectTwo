@@ -6,86 +6,14 @@
 
 //The final option is then drawn from the array and printed to the screen via SR accessible text, and an accompanying image.
 
-
-
-
 // Idea: User input provides value for ID for Muscle group and eqipment. Based off that value we get the API link Use the code below as an example
-
-// const endpointUrl = new URL('https://api.datamuse.com/words%27)
-
-//   console.log(endpointUrl)
-
-//   endpointUrl.search = new URLSearchParams({
-//     ml: "sandwich"
-//   })
-
-//   fetch(endpointUrl)
-//   .then( response =>  response.json()
-//   )
-//   .then((jsonResult) => {
-//     console.log(jsonResult)
-//   });
-
-
-// endpointUrl.search = new URLSearchParams({
-//     muscles: bodyGroup.value,
-//     equipment: equipGroup.value
-// });
-
-// fetch (endpointUrl)
-//   .then ( response => response.json())
-//   .then((jsonResult) => {
-//       console.log(jsonResult)
-// });
-
-// let userInput1 = undefined;
-// let userInput2 = undefined;
-
-// const form = document.getElementById("userInput");
-
-// const bodyGroup = document.getElementById("bodyGroup");
-// const equipGroup = document.getElementById("equipGroup");
-
-// bodyGroup.addEventListener('change', (event) => {
-//   let bodyGroup = form.elements['bodyGroup'];
-//   userInput1 = bodyGroup.value;
-
-//   console.log(userInput1);
-// })
-
-// equipGroup.addEventListener('change', (event) => {
-//   let equipGroup = form.elements['equipGroup'];
-//   userInput2 = equipGroup.value;
-//   console.log(userInput2);
-// })
-
-// form.addEventListener('submit', (event) => {
-//   event.preventDefault();
-//   console.log(userInput1, userInput2)
-
-//   const endpointUrl = new URL(`https://wger.de/api/v2/exerciseinfo/?format=json`)
-
-//   console.log(endpointUrl);
-// })
-
-
-    // fetch('https://wger.de/api/v2/exercise/?results.category/')
-    // .then( (response) => {
-    // return response.json();
-    // })
-    // .then( (jsonResult) => {
-    // const exercise = jsonResult.results[0].name;
-    // console.log(exercise)
-    // const paragraphEl = document.querySelector('p.nextDeparture')
-    // paragraphEl.innerHTML = `Work on your ${exercise}.`
-    // });
 
 
 // Build Our API Request
 const app = {};
 
  // Make API call to get Name of Exercise
- app.getExercises = () => {
+app.getExercises = () => {
 
   const endpointUrl = new URL(`https://wger.de/api/v2/exercise`)
   endpointUrl.search = new URLSearchParams({
@@ -97,45 +25,38 @@ const app = {};
     .then ( response => {
       return response.json()})
     .then((jsonResult) => {
-        
-        app.displayExercises(jsonResult.results)
+      document.querySelector('#exercise').innerHTML = '';
+      app.displayExercises(jsonResult.results)
   });
 };
-
-
-//  use Math.floor in order to select a random number assigned to the index of the array and display that name on the page
-
-
-
 
 //  Display Exercise on Page
 
 app.displayExercises = function(exerciseName) {
 
+  // Selects a random exercise name from the array of the object
+  const exerciseId = Math.floor(Math.random() * exerciseName.length);
   const getRandomExerciseName = function() {
-    const exerciseId = Math.floor(Math.random() * exerciseName.length);
-    return exerciseName[exerciseId].name
+    const filteredName = exerciseName[exerciseId].name
+    return filteredName 
     }
+  const getRandomExerciseDesc = function() {
+    const filteredDesc = exerciseName[exerciseId].description
+    return filteredDesc 
+    }
+  // Appends chosen exercise on page
+  const name = document.createElement("h2");
+  name.innerText = getRandomExerciseName();
+  const desc = document.createElement("p");
+  desc.innerHTML = getRandomExerciseDesc();
 
-  exerciseName.map(function(exerciseObject) {
-    const name = document.createElement("h2")
-    name.innerText = getRandomExerciseName()
 
-    const exercise = document.createElement("div");
-    exercise.classList.add("exerciseInfo");
-
-    exercise.appendChild(name);
-
-
-
-    document.querySelector("#exercise").appendChild(exercise);
-    return exerciseObject
-    
-  })
-
-  console.log(getRandomExerciseName())
-  console.log(exerciseName)
-  // console.log(exerciseObject)
+  const exercise = document.createElement("div");
+  exercise.classList.add("exerciseInfo");
+  exercise.appendChild(name);
+  exercise.appendChild(desc);
+  document.querySelector("#exercise").appendChild(exercise);
+  console.log(exerciseName);
 }
 
 
