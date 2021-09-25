@@ -14,9 +14,10 @@ const app = {};
 
  // Make API call to get Name of Exercise
 app.getExercises = () => {
-
-  const endpointUrl = new URL(`https://wger.de/api/v2/exercise`)
+  const endpointUrl = new URL(`https://wger.de/api/v2/exerciseinfo/?format=json&?limit=419`)
   endpointUrl.search = new URLSearchParams({
+    limit: 99,
+    offset: 0,
     language: app.langForm,
     category: app.bodyForm,
     equipment: app.equipForm
@@ -26,7 +27,7 @@ app.getExercises = () => {
       return response.json()})
     .then((jsonResult) => {
       document.querySelector('#exercise').innerHTML = '';
-      app.displayExercises(jsonResult.results)
+      app.displayExercises(jsonResult.results);
   });
 };
 
@@ -50,7 +51,6 @@ app.displayExercises = function(exerciseName) {
   const desc = document.createElement("p");
   desc.innerHTML = getRandomExerciseDesc();
 
-
   const exercise = document.createElement("div");
   exercise.classList.add("exerciseInfo");
   exercise.appendChild(name);
@@ -58,7 +58,6 @@ app.displayExercises = function(exerciseName) {
   document.querySelector("#exercise").appendChild(exercise);
   console.log(exerciseName);
 }
-
 
 // Event Listeners for Option
 
