@@ -41,7 +41,7 @@ header {
     justify-content: space-between;
     align-items: center;
     i {
-        font-size: 2rem;
+        font-size: 2.6rem;
         padding-left: 40px;
     }
     nav ul{
@@ -57,11 +57,11 @@ header {
                 font-weight: bold;
             }
         select {
-            margin: 0 20px;
             padding: 2px;
             background-color: $tertiaryColor;
             border-radius: 4%;
             border: $quaternaryColor 2px solid;
+            font-weight: bold;
             font-family: $baseFont;
             color: $quaternaryColor;
         }
@@ -75,6 +75,7 @@ main {
     height: 55vh;
     background: $secondaryColor;
     color: $quaternaryColor;
+    font-size: 22px;
     form {
         display: flex;
         justify-content: center;
@@ -87,6 +88,7 @@ main {
                 border-radius: 4%;
                 border: $quaternaryColor 2px solid;
                 font-size: 20px;
+                font-weight: bold;
                 font-family: $baseFont;
                 color: $quaternaryColor;
             }
@@ -94,17 +96,39 @@ main {
             margin: 0 20px;
             padding: 6px 10px;
             background-color: $tertiaryColor;
-            border-radius: 4%;
+            border-radius: 10%;
             border: $quaternaryColor 2px solid;
             font-family: $baseFont;
+            font-weight: bold;
             color: $quaternaryColor;
         }
+    }
+}
+.howTo {
+    font-weight: 400;
+    text-align: center;
+}
+
+.exerciseInfo {
+    padding-top: 40px;
+    h2 {
+        padding: 8px;
+        display: inline-block;
+        border: $quaternaryColor 2px solid;
+        background-color: $tertiaryColor;
+    }
+    p {
+        font-family: $subFont;
+        font-weight: 400;
+        padding: 10px;
+        display: inline-block;
     }
 }
 
 
 footer {
     font-family: $baseFont;
+    font-size: 18px;
     background: $tertiaryColor;
     height: 7vh;
     div {
