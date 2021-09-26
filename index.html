@@ -9,60 +9,61 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;800&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,500&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="./styles/styles.css">
     
     <title>Fire & Forget Fitness</title>
 </head>
 
-
 <body>
     <header>
         <div class="navBar">
+            <i class="fas fa-fire-alt" aria-hidden=“true”></i>
             <nav>
                 <ul>
                     <li><a href="">THIS</a></li>
                     <li><a href="">THAT</a></li>
-                    <li><a href="">THE OTHER</a></li>
+                    <li>
+                        <form action="index.html">
+                            <select name="langGroup" id="langGroup">
+                                <option value="2">English</option>
+                                <option value="1">Deutsch</option>
+                            </select>
+                        </form>
+                    </li>
                 </ul>
             </nav>
         </div>
         <div class=" title wrapper"> 
-            <h1>FIRE & FORGET</h1>
-            <img src="./missileIcon.svg" alt="">
+            <h1>FIRE+FORGET</h1>
             <h2>FITNESS</h2>
+            <i class="fas fa-fire-alt" aria-hidden=“true”></i>
         </div>
     </header>
 
-
     <main>
         <div class="wrapper">
+            <p class="howTo">Simply choose your desired area to strengthen, and tell us about your equipment situation, and let us do all the rest.</p>
             <form action="index.html"  method="POST"  id="userInput">
-                <select name="langGroup" id="langGroup">
-                    <option value="2">English</option>
-                    <option value="1">Deutsch</option>
-                </select>
-                <label for="bodyGroup">BODY GROUP</label>
-            <!-- <input type="text" id="bodyGroup" name="bodyGroup"> -->
+                <label for="bodyGroup">BODY GROUP:</label>
                 <select name="bodyGroup" id="bodyGroup">
-                <option value="10">Abs</option>
-                <option value="8">Arms</option>
-                <option value="12">Back</option>
-                <option value="11">Chest</option>
-                <option value="9">Legs</option>
-                <option value="13">Shoulders</option>
+                    <option value="10">Abs</option>
+                    <option value="8">Arms</option>
+                    <option value="12">Back</option>
+                    <option value="11">Chest</option>
+                    <option value="9">Legs</option>
+                    <option value="13">Shoulders</option>
                 </select>
-                <label for="equipGroup">YOUR EQUIPMENT</label>
-            <!-- <input type="text" id="equipGroup" name="equipGroup"> -->
+                <label for="equipGroup">YOUR EQUIPMENT:</label>
                 <select name="equipGroup" id="equipGroup">
-                <option value="7">None</option>
-                <option value="3">Dumbbell</option>
-                <!-- Come back to the value for the gym https://wger.de/api/v2/equipment/ -->
-                <option value="1, 2, 4, 5, 6, 8, 9, 10">I have a Gym</option>
-            </select>
-            <input type="submit" value="Submit">
+                    <option value="7">None</option>
+                    <option value="3">Dumbbell</option>
+                    <option value="1, 2, 4, 5, 6, 8, 9, 10">I have a Gym</option>
+                </select>
+                <input type="submit" value="Fire">
             </form>
-            
             <div class="exercise" id="exercise">
+                <!-- API data will be displayed here, 1 <h2> and 1 <p> -->
             </div>
         </div>
     </main>
@@ -70,11 +71,9 @@
 
     <footer>
         <div class="wrapper">
-            <p>Juno College of Technology</p>
+            <p>Juno College of Technology &copy;</p>
             <p>API courtesy of WGER.com</p>
-            <p>Icon made from Icon Font is licensed by CC BY 3.0</p>
         </div>
-        
     </footer>
 </body>
 
