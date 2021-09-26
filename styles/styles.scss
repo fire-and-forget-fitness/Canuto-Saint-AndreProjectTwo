@@ -3,6 +3,7 @@ $baseFont: 'Inconsolata', monospace;
 $primaryColor: #d72323;
 $secondaryColor: #3a4750;
 $tertiaryColor: #303841;
+$quaternaryColor: #eeeeee;
 
 .wrapper {
     max-width: 1200px;
@@ -11,6 +12,7 @@ $tertiaryColor: #303841;
 }
 header {
     font-family: $baseFont;
+    letter-spacing: 5px;
     height: 38vh;
     background-color: $primaryColor;
         nav {
@@ -41,6 +43,7 @@ header {
     img {
         width: 212px;
         height: auto;
+        color: $quaternaryColor;
     }
     h2 {
         font-size: 5.2rem;
@@ -53,12 +56,21 @@ main {
     font-weight: 800;
     height: 55vh;
     background: $secondaryColor;
+    color: $quaternaryColor;
 }
 footer {
     font-family: $baseFont;
     background: $tertiaryColor;
     height: 7vh;
-    p {
-        margin: 0;
+    div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 14px;
+        p {
+            margin: 0;
+            font-weight: 700;
+            color: $quaternaryColor;
+        }
     }
 }

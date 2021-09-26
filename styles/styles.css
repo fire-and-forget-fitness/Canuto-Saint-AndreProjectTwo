@@ -238,6 +238,7 @@ html {
 
 header {
   font-family: "Inconsolata", monospace;
+  letter-spacing: 5px;
   height: 38vh;
   background-color: #d72323;
 }
@@ -271,6 +272,7 @@ header nav ul li a {
 .title img {
   width: 212px;
   height: auto;
+  color: #eeeeee;
 }
 .title h2 {
   font-size: 5.2rem;
@@ -283,6 +285,7 @@ main {
   font-weight: 800;
   height: 55vh;
   background: #3a4750;
+  color: #eeeeee;
 }
 
 footer {
@@ -290,6 +293,14 @@ footer {
   background: #303841;
   height: 7vh;
 }
-footer p {
+footer div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 14px;
+}
+footer div p {
   margin: 0;
+  font-weight: 700;
+  color: #eeeeee;
 }/*# sourceMappingURL=styles.css.map */
