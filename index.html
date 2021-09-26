@@ -20,9 +20,9 @@
         <div class="navBar">
             <nav>
                 <ul>
-                    <li>THIS</li>
-                    <li>THAT</li>
-                    <li>THE OTHER</li>
+                    <li><a href="">THIS</a></li>
+                    <li><a href="">THAT</a></li>
+                    <li><a href="">THE OTHER</a></li>
                 </ul>
             </nav>
         </div>
@@ -38,13 +38,12 @@
     <main>
         <div class="wrapper">
             <form action="index.html"  method="POST"  id="userInput">
+                <select name="langGroup" id="langGroup">
+                    <option value="2">English</option>
+                    <option value="1">Deutsch</option>
+                </select>
             <label for="bodyGroup">BODY GROUP</label>
             <!-- <input type="text" id="bodyGroup" name="bodyGroup"> -->
-            <select name="langGroup" id="langGroup">
-                <option value="2">English</option>
-                <option value="1">Deutsch</option>
-            </select>
-
             <select name="bodyGroup" id="bodyGroup">
                 <option value="10">Abs</option>
                 <option value="8">Arms</option>
@@ -61,22 +60,20 @@
                 <!-- Come back to the value for the gym https://wger.de/api/v2/equipment/ -->
                 <option value="1, 2, 4, 5, 6, 8, 9, 10">I have a Gym</option>
             </select>
-
             <input type="submit" value="Submit">
-
-        </form>
-
-        <div class="exercise" id="exercise">
-
-        </div>
+            </form>
+            
+            <div class="exercise" id="exercise">
+            </div>
         </div>
     </main>
 
-    
+
     <footer>
         <div class="wrapper">
             <p class="copyright">Juno College of Technology</p>
-            <div>Icon made from <a href="http://www.onlinewebfonts.com/icon">Icon Fonts</a> is licensed by CC BY 3.0</div>
+            <p>API courtesy of WGER.com</p>
+            <div>Icon made from Icon Font is licensed by CC BY 3.0</div>
         </div>
         
     </footer>

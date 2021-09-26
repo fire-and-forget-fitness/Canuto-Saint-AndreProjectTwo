@@ -1,5 +1,8 @@
 @import "setup";
 $baseFont: 'Inconsolata', monospace;
+$primaryColor: #d72323;
+$secondaryColor: #3a4750;
+$tertiaryColor: #303841;
 
 .wrapper {
     max-width: 1200px;
@@ -8,25 +11,54 @@ $baseFont: 'Inconsolata', monospace;
 }
 header {
     font-family: $baseFont;
-    nav {
-        display: flex;
-        justify-content: right;
-        ul {
+    height: 38vh;
+    background-color: $primaryColor;
+        nav {
             display: flex;
-            list-style: none;
+            justify-content: right;
+            ul {
+                display: flex;
+                list-style: none;
+                width: 30%;
+                justify-content: space-between;
+                margin-right: 40px;
+                li a {
+                    text-decoration: none;
+                    color: black;
+                    font-weight: 600;
+                }
+            }
         }
     }
+    .title {
+        display: flex;
+        flex-direction: column;     align-items: center;
+        padding-bottom: 50px;
     h1 {
-        font-size: 6rem;
+        font-size: 6.2rem;
         margin: 0 0 -60px 0;
     }
     img {
-        width: 200px;
+        width: 212px;
         height: auto;
     }
     h2 {
-        font-size: 5rem;
-        margin: -40px 0 0 0;
+        font-size: 5.2rem;
+        margin: -60px 0 0 0;
     }
-
+}
+main {
+    padding-top: 80px;
+    font-family: $baseFont;
+    font-weight: 800;
+    height: 55vh;
+    background: $secondaryColor;
+}
+footer {
+    font-family: $baseFont;
+    background: $tertiaryColor;
+    height: 7vh;
+    p {
+        margin: 0;
+    }
 }
