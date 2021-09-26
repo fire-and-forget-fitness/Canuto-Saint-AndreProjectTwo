@@ -1,0 +1,39 @@
+@media (max-width: 940px) {
+    main form {
+        flex-direction: column;
+        select {
+            margin-bottom: 40px;
+        }
+    }
+}
+
+
+@media (max-width: 768px) {
+}
+
+
+@media (max-width: 480px) {
+    header .title h1 {
+        padding-top: 60px;
+        font-size: 48px;
+    }
+    header .title h2 {
+        font-size: 44px;
+    }
+    header .title i {
+        font-size: 40px;
+    }
+    .navBar{
+        i{
+            display: none;
+        }
+        nav {
+            align-self: center;
+            justify-self: center;
+            margin: 0;
+        }
+    }
+    footer div p{
+        display: none;
+    }
+}

@@ -1,6 +1,5 @@
 @import "setup";
 
-
 $baseFont: 'Inconsolata', monospace;
 $subFont: 'Lora', serif;
 $primaryColor: #d72323;
@@ -154,7 +153,6 @@ footer {
         }
     }
 }
-
 
 @media (max-width: 940px) {
     main form {
