@@ -15,39 +15,41 @@ header {
     letter-spacing: 5px;
     height: 38vh;
     background-color: $primaryColor;
-        nav {
-            display: flex;
-            justify-content: right;
-            ul {
-                display: flex;
-                list-style: none;
-                width: 30%;
-                justify-content: space-between;
-                margin-right: 40px;
-                li a {
-                    text-decoration: none;
-                    color: black;
-                    font-weight: 600;
-                }
-            }
-        }
-    }
+    color: $tertiaryColor;
     .title {
         display: flex;
         flex-direction: column;     align-items: center;
-        padding-bottom: 50px;
-    h1 {
+        h1 {
         font-size: 6.2rem;
-        margin: 0 0 -60px 0;
-    }
-    img {
-        width: 212px;
-        height: auto;
-        color: $quaternaryColor;
-    }
-    h2 {
+        margin: 0;
+        }
+        h2 {
         font-size: 5.2rem;
-        margin: -60px 0 0 0;
+        margin: 0;
+        padding-bottom: 8px;
+        }
+        i {
+            font-size: 5rem;
+        }
+    }
+}
+.navBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    nav ul{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        li{
+            list-style: none;
+            padding: 0 18px;
+            a {
+                text-decoration: none;
+                color: black;
+                font-weight: bold;
+            }
+        }
     }
 }
 main {
@@ -58,6 +60,7 @@ main {
     background: $secondaryColor;
     color: $quaternaryColor;
 }
+
 footer {
     font-family: $baseFont;
     background: $tertiaryColor;
