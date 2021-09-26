@@ -9,11 +9,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;800&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,500&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="./styles/styles.css">
     
     <title>Fire & Forget Fitness</title>
 </head>
-
 
 <body>
     <header>
@@ -41,33 +41,28 @@
         </div>
     </header>
 
-
-
     <main>
         <div class="wrapper">
             <form action="index.html"  method="POST"  id="userInput">
-            <label for="bodyGroup">BODY GROUP</label>
-            <!-- <input type="text" id="bodyGroup" name="bodyGroup"> -->
-            <select name="bodyGroup" id="bodyGroup">
-                <option value="10">Abs</option>
-                <option value="8">Arms</option>
-                <option value="12">Back</option>
-                <option value="11">Chest</option>
-                <option value="9">Legs</option>
-                <option value="13">Shoulders</option>
-            </select>
-            <label for="equipGroup">YOUR EQUIPMENT</label>
-            <!-- <input type="text" id="equipGroup" name="equipGroup"> -->
-            <select name="equipGroup" id="equipGroup">
-                <option value="7">None</option>
-                <option value="3">Dumbbell</option>
-                <!-- Come back to the value for the gym https://wger.de/api/v2/equipment/ -->
-                <option value="1, 2, 4, 5, 6, 8, 9, 10">I have a Gym</option>
-            </select>
-            <input type="submit" value="Submit">
+                    <label for="bodyGroup">BODY GROUP:</label>
+                    <select name="bodyGroup" id="bodyGroup">
+                        <option value="10">Abs</option>
+                        <option value="8">Arms</option>
+                        <option value="12">Back</option>
+                        <option value="11">Chest</option>
+                        <option value="9">Legs</option>
+                        <option value="13">Shoulders</option>
+                    </select>
+                    <label for="equipGroup">YOUR EQUIPMENT:</label>
+                    <select name="equipGroup" id="equipGroup">
+                        <option value="7">None</option>
+                        <option value="3">Dumbbell</option>
+                        <option value="1, 2, 4, 5, 6, 8, 9, 10">I have a Gym</option>
+                    </select>
+                <input type="submit" value="Fire">
             </form>
-            
             <div class="exercise" id="exercise">
+                <!-- API data will be displayed here, 1 <h2> and 1 <p> -->
             </div>
         </div>
     </main>

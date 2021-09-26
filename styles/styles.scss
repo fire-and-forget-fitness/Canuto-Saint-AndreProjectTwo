@@ -1,5 +1,6 @@
 @import "setup";
 $baseFont: 'Inconsolata', monospace;
+$subFont: 'Lora', serif;
 $primaryColor: #d72323;
 $secondaryColor: #3a4750;
 $tertiaryColor: #303841;
@@ -24,6 +25,8 @@ header {
         margin: 0;
         }
         h2 {
+        font-family: $subFont;
+        font-weight: 400;
         font-size: 5.2rem;
         margin: 0;
         padding-bottom: 8px;
@@ -37,6 +40,10 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    i {
+        font-size: 2rem;
+        padding-left: 40px;
+    }
     nav ul{
         display: flex;
         justify-content: center;
@@ -46,20 +53,55 @@ header {
             padding: 0 18px;
             a {
                 text-decoration: none;
-                color: black;
+                color: $tertiaryColor;
                 font-weight: bold;
             }
+        select {
+            margin: 0 20px;
+            padding: 2px;
+            background-color: $tertiaryColor;
+            border-radius: 4%;
+            border: $quaternaryColor 2px solid;
+            font-family: $baseFont;
+            color: $quaternaryColor;
+        }
         }
     }
 }
 main {
     padding-top: 80px;
     font-family: $baseFont;
-    font-weight: 800;
+    font-weight: 600;
     height: 55vh;
     background: $secondaryColor;
     color: $quaternaryColor;
+    form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        letter-spacing: 2px;
+        select {
+                margin: 0 20px;
+                padding: 2px;
+                background-color: $tertiaryColor;
+                border-radius: 4%;
+                border: $quaternaryColor 2px solid;
+                font-size: 20px;
+                font-family: $baseFont;
+                color: $quaternaryColor;
+            }
+        input {
+            margin: 0 20px;
+            padding: 6px 10px;
+            background-color: $tertiaryColor;
+            border-radius: 4%;
+            border: $quaternaryColor 2px solid;
+            font-family: $baseFont;
+            color: $quaternaryColor;
+        }
+    }
 }
+
 
 footer {
     font-family: $baseFont;
