@@ -1,0 +1,76 @@
+@import "setup";
+$baseFont: 'Inconsolata', monospace;
+$primaryColor: #d72323;
+$secondaryColor: #3a4750;
+$tertiaryColor: #303841;
+$quaternaryColor: #eeeeee;
+
+.wrapper {
+    max-width: 1200px;
+    width: 85%;
+    margin: 0 auto;
+}
+header {
+    font-family: $baseFont;
+    letter-spacing: 5px;
+    height: 38vh;
+    background-color: $primaryColor;
+        nav {
+            display: flex;
+            justify-content: right;
+            ul {
+                display: flex;
+                list-style: none;
+                width: 30%;
+                justify-content: space-between;
+                margin-right: 40px;
+                li a {
+                    text-decoration: none;
+                    color: black;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+    .title {
+        display: flex;
+        flex-direction: column;     align-items: center;
+        padding-bottom: 50px;
+    h1 {
+        font-size: 6.2rem;
+        margin: 0 0 -60px 0;
+    }
+    img {
+        width: 212px;
+        height: auto;
+        color: $quaternaryColor;
+    }
+    h2 {
+        font-size: 5.2rem;
+        margin: -60px 0 0 0;
+    }
+}
+main {
+    padding-top: 80px;
+    font-family: $baseFont;
+    font-weight: 800;
+    height: 55vh;
+    background: $secondaryColor;
+    color: $quaternaryColor;
+}
+footer {
+    font-family: $baseFont;
+    background: $tertiaryColor;
+    height: 7vh;
+    div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 14px;
+        p {
+            margin: 0;
+            font-weight: 700;
+            color: $quaternaryColor;
+        }
+    }
+}
